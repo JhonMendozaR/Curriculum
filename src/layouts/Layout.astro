@@ -5,12 +5,99 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" /> <!-- Si el navegador soporta SVG usará favicon.svg -->
 		<link rel="icon" href="/favicon.ico" /> <!-- Si el navegador no soporta SVG usará usará favicon.ico -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+		
+		<!-- SEO Meta Tags -->
 		<title>Jhon Mendoza</title>
+		<meta name="description" content="Desarrollador Full Stack especializado en crear soluciones web modernas y eficientes." />
+		<meta name="author" content="Jhon Mendoza" />
+		
+		<!-- Open Graph -->
+		<meta property="og:title" content="Jhon Mendoza - Desarrollador Full Stack" />
+		<meta property="og:description" content="Desarrollador Full Stack especializado en crear soluciones web modernas y eficientes." />
+		<meta property="og:type" content="website" />
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
+<style is:global>
+	:root {
+		/* Colores Primarios */
+		--primary-900: #0A0E27;
+		--primary-700: #1E293B;
+		--primary-500: #3B82F6;
+		--primary-300: #60A5FA;
+
+		/* Colores Secundarios */
+		--secondary-900: #1F2937;
+		--secondary-700: #374151;
+		--secondary-300: #D1D5DB;
+		--secondary-100: #F3F4F6;
+
+		/* Colores de Acento */
+		--accent-purple: #8B5CF6;
+		--accent-teal: #14B8A6;
+		--accent-orange: #F97316;
+		--accent-pink: #EC4899;
+
+		/* Neutrales */
+		--white: #FFFFFF;
+		--black: #000000;
+		--background: #FAFAFA;
+		--text-primary: #111827;
+		--text-secondary: #6B7280;
+
+		/* Gradientes */
+		--gradient-1: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+		--gradient-2: linear-gradient(135deg, #14B8A6 0%, #3B82F6 100%);
+		--gradient-3: linear-gradient(135deg, #F97316 0%, #EC4899 100%);
+
+		/* Espaciado */
+		--space-4: 1rem;
+		--space-6: 1.5rem;
+		--space-8: 2rem;
+		--space-12: 3rem;
+		--space-16: 4rem;
+		--space-20: 5rem;
+		--space-24: 6rem;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+		background: var(--background);
+		color: var(--text-primary);
+		line-height: 1.5;
+		overflow-x: hidden;
+	}
+
+	/* Accesibilidad */
+	*:focus-visible {
+		outline: 3px solid var(--primary-500);
+		outline-offset: 2px;
+	}
+
+	/* Prefers reduced motion */
+	@media (prefers-reduced-motion: reduce) {
+		*,
+		*::before,
+		*::after {
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.01ms !important;
+		}
+	}
 </style>

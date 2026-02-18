@@ -1,0 +1,196 @@
+---
+---
+
+<section id="sobre-mi" class="about-section">
+	<div class="container">
+		<div class="section-header">
+			<span class="section-badge">Sobre mí</span>
+			<h2 class="section-title">¿Quién soy?</h2>
+			<p class="section-subtitle">
+				Conoce más sobre mi experiencia y habilidades
+			</p>
+		</div>
+
+		<div class="about-grid">
+			<!-- Descripción -->
+			<div class="about-description">
+				<p class="text-lg">
+					Soy un desarrollador apasionado por crear soluciones tecnológicas que 
+					resuelven problemas reales. Con experiencia en desarrollo full stack, 
+					me especializo en construir aplicaciones web modernas, escalables y 
+					centradas en el usuario.
+				</p>
+				<p>
+					Mi enfoque combina código limpio, mejores prácticas y una constante 
+					búsqueda de aprendizaje. Me encanta trabajar en equipo y compartir 
+					conocimientos para crear productos excepcionales.
+				</p>
+			</div>
+
+			<!-- Skills -->
+			<div class="skills-container">
+				<h3 class="skills-title">Habilidades Técnicas</h3>
+				<div class="skills-grid">
+					<div class="skill-item">
+						<span class="skill-icon">⚛️</span>
+						<span class="skill-name">React & Next.js</span>
+					</div>
+					<div class="skill-item">
+						<span class="skill-icon">🎨</span>
+						<span class="skill-name">Tailwind CSS</span>
+					</div>
+					<div class="skill-item">
+						<span class="skill-icon">🟢</span>
+						<span class="skill-name">Node.js</span>
+					</div>
+					<div class="skill-item">
+						<span class="skill-icon">🗄️</span>
+						<span class="skill-name">PostgreSQL</span>
+					</div>
+					<div class="skill-item">
+						<span class="skill-icon">📱</span>
+						<span class="skill-name">Responsive Design</span>
+					</div>
+					<div class="skill-item">
+						<span class="skill-icon">🚀</span>
+						<span class="skill-name">Astro & SSG</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.about-section {
+		padding: var(--space-20) 0;
+		background: var(--white);
+	}
+
+	.container {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 0 clamp(1rem, 5vw, 3rem);
+	}
+
+	/* Section Header */
+	.section-header {
+		text-align: center;
+		margin-bottom: var(--space-16);
+	}
+
+	.section-badge {
+		display: inline-block;
+		padding: 0.5rem 1rem;
+		background: var(--secondary-100);
+		color: var(--primary-500);
+		border-radius: 9999px;
+		font-size: 0.875rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		margin-bottom: 1rem;
+	}
+
+	.section-title {
+		font-size: clamp(2rem, 5vw, 3rem);
+		font-weight: 800;
+		color: var(--text-primary);
+		margin-bottom: 1rem;
+		line-height: 1.2;
+	}
+
+	.section-subtitle {
+		font-size: clamp(1rem, 3vw, 1.25rem);
+		color: var(--text-secondary);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	/* About Grid */
+	.about-grid {
+		display: grid;
+		gap: var(--space-12);
+	}
+
+	.about-description {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.text-lg {
+		font-size: 1.125rem;
+		line-height: 1.8;
+		color: var(--text-primary);
+		font-weight: 500;
+	}
+
+	.about-description p {
+		font-size: 1rem;
+		line-height: 1.8;
+		color: var(--text-secondary);
+	}
+
+	/* Skills */
+	.skills-container {
+		background: var(--background);
+		padding: var(--space-8);
+		border-radius: 1.5rem;
+		border: 1px solid var(--secondary-300);
+	}
+
+	.skills-title {
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: var(--text-primary);
+		margin-bottom: var(--space-6);
+	}
+
+	.skills-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		gap: 1rem;
+	}
+
+	.skill-item {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		padding: 1rem;
+		background: var(--white);
+		border-radius: 0.75rem;
+		border: 1px solid var(--secondary-300);
+		transition: all 0.3s ease;
+	}
+
+	.skill-item:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+		border-color: var(--primary-500);
+	}
+
+	.skill-icon {
+		font-size: 1.5rem;
+	}
+
+	.skill-name {
+		font-size: 0.9375rem;
+		font-weight: 600;
+		color: var(--text-primary);
+	}
+
+	/* Responsive */
+	@media (min-width: 768px) {
+		.about-grid {
+			grid-template-columns: 1fr 1fr;
+			align-items: start;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.skills-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
