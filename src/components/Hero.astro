@@ -1,5 +1,6 @@
 ---
-import perfilProgramador from '../assets/Perfil-programador.png';
+import perfil from '../assets/Perfil.png';
+import perfilProfesional from '../assets/Perfil-profesional1.png';
 import { Image } from 'astro:assets';
 ---
 
@@ -7,9 +8,7 @@ import { Image } from 'astro:assets';
 	<div class="container">
 		<div class="hero-grid">
 			<!-- Contenido Principal -->
-			<div class="hero-content">
-				<span class="hero-badge">👋 Disponible para proyectos</span>
-				
+			<div class="hero-content">				
 				<h1 class="hero-title">
 					Hola, soy <span class="text-gradient">Jhon Mendoza</span>
 				</h1>
@@ -21,8 +20,8 @@ import { Image } from 'astro:assets';
 				</p>
 				
 				<div class="cta-group">
-					<a href="#proyectos" class="btn btn-primary">
-						Ver Proyectos
+					<a href="#experiencia" class="btn btn-primary">
+						Ver Experiencia
 						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 							<path d="M5 12h14M12 5l7 7-7 7"/>
 						</svg>
@@ -31,33 +30,31 @@ import { Image } from 'astro:assets';
 						Contactar
 					</a>
 				</div>
-
-				<!-- Stats -->
-				<div class="hero-stats">
-					<div class="stat-item">
-						<span class="stat-number">5+</span>
-						<span class="stat-label">Años Experiencia</span>
-					</div>
-					<div class="stat-item">
-						<span class="stat-number">50+</span>
-						<span class="stat-label">Proyectos</span>
-					</div>
-					<div class="stat-item">
-						<span class="stat-number">100%</span>
-						<span class="stat-label">Satisfacción</span>
-					</div>
-				</div>
 			</div>
 
 			<!-- Imagen Flotante -->
 			<div class="hero-visual">
 				<div class="hero-image-wrapper">
-					<Image 
-						src={perfilProgramador} 
-						alt="Jhon Mendoza - Desarrollador"
-						class="hero-image"
-						loading="eager"
-					/>
+					<div class="image-flip-container">
+						<div class="image-flip-inner">
+							<div class="image-flip-front">
+								<Image 
+									src={perfil} 
+									alt="Jhon Mendoza - Desarrollador"
+									class="hero-image"
+									loading="eager"
+								/>
+							</div>
+							<div class="image-flip-back">
+								<Image 
+									src={perfilProfesional} 
+									alt="Jhon Mendoza - Profesional"
+									class="hero-image"
+									loading="eager"
+								/>
+							</div>
+						</div>
+					</div>
 				</div>
 				
 				<!-- Elementos decorativos -->
@@ -104,19 +101,6 @@ import { Image } from 'astro:assets';
 	.hero-content {
 		text-align: center;
 		animation: fadeInUp 0.8s ease-out;
-	}
-
-	.hero-badge {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.5rem;
-		padding: 0.5rem 1rem;
-		background: var(--secondary-100);
-		color: var(--text-secondary);
-		border-radius: 9999px;
-		font-size: 0.875rem;
-		font-weight: 500;
-		margin-bottom: 1.5rem;
 	}
 
 	.hero-title {
@@ -213,35 +197,6 @@ import { Image } from 'astro:assets';
 		transform: translateY(-2px);
 	}
 
-	/* ===== STATS ===== */
-	.hero-stats {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-		gap: 2rem;
-		max-width: 500px;
-		margin: 0 auto;
-		animation: fadeInUp 0.8s ease-out 0.6s backwards;
-	}
-
-	.stat-item {
-		display: flex;
-		flex-direction: column;
-		gap: 0.25rem;
-	}
-
-	.stat-number {
-		font-size: clamp(1.75rem, 4vw, 2.5rem);
-		font-weight: 800;
-		color: var(--primary-500);
-		line-height: 1;
-	}
-
-	.stat-label {
-		font-size: 0.875rem;
-		color: var(--text-secondary);
-		font-weight: 500;
-	}
-
 	/* ===== IMAGEN FLOTANTE ===== */
 	.hero-visual {
 		position: relative;
@@ -254,14 +209,50 @@ import { Image } from 'astro:assets';
 	.hero-image-wrapper {
 		position: relative;
 		width: 100%;
-		max-width: 400px;
+		max-width: 350px;
 		z-index: 2;
 		animation: float 6s ease-in-out infinite;
+	}
+
+	/* ===== EFECTO FLIP 3D ===== */
+	.image-flip-container {
+		perspective: 1000px;
+		width: 100%;
+		height: 100%;
+	}
+
+	.image-flip-inner {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+		transform-style: preserve-3d;
+	}
+
+	.image-flip-container:hover .image-flip-inner {
+		transform: rotateY(180deg);
+	}
+
+	.image-flip-front,
+	.image-flip-back {
+		position: relative;
+		width: 100%;
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+	}
+
+	.image-flip-back {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: rotateY(180deg);
 	}
 
 	.hero-image {
 		width: 100%;
 		height: auto;
+		display: block;
+		border-radius: 1rem;
 	}
 
 	/* Decoraciones */
@@ -278,7 +269,7 @@ import { Image } from 'astro:assets';
 		width: 300px;
 		height: 300px;
 		background: var(--primary-500);
-		top: -50px;
+		top: 200px;
 		right: -50px;
 	}
 
@@ -369,10 +360,6 @@ import { Image } from 'astro:assets';
 			justify-content: flex-start;
 		}
 
-		.hero-stats {
-			margin: 0;
-		}
-
 		.hero-visual {
 			order: 2;
 		}
@@ -381,10 +368,6 @@ import { Image } from 'astro:assets';
 	@media (max-width: 640px) {
 		.btn {
 			width: 100%;
-		}
-
-		.hero-stats {
-			gap: 1.5rem;
 		}
 	}
 </style>

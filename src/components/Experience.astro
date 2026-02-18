@@ -1,0 +1,431 @@
+---
+import perfilProfesional from '../assets/Programando.png';
+import { Image } from 'astro:assets';
+---
+
+<section id="experiencia" class="experience-section">
+	<div class="container">
+		<div class="section-header">
+			<h2 class="section-title">
+				Experiencia <span class="text-gradient">Profesional</span>
+			</h2>
+			<p class="section-subtitle">
+				Mi trayectoria en desarrollo y gestión empresarial
+			</p>
+		</div>
+
+		<div class="experience-grid">
+			<!-- Imagen Profesional -->
+			<div class="experience-visual">
+				<div class="image-wrapper">
+					<Image 
+						src={perfilProfesional} 
+						alt="Perfil Profesional"
+						class="experience-image"
+						loading="lazy"
+					/>
+				</div>
+				<div class="decoration-circle"></div>
+			</div>
+
+			<!-- Timeline de Experiencia -->
+			<div class="experience-timeline">
+				<!-- ST&T -->
+				<div class="timeline-item">
+					<div class="timeline-marker">
+						<div class="marker-dot"></div>
+						<div class="marker-line"></div>
+					</div>
+					<div class="timeline-content">
+						<div class="timeline-header">
+							<h3 class="job-title">Desarrollador - Practicante SENA</h3>
+							<span class="job-duration">2 meses</span>
+						</div>
+						<div class="job-company">ST&T</div>
+						<div class="job-date">Diciembre de 2024 - Actualidad</div>
+						<p class="job-description">
+							Desarrollo de soluciones tecnológicas aplicando las mejores prácticas de programación, 
+							colaboración en proyectos de software y participación activa en el ciclo completo de desarrollo.
+						</p>
+						<div class="job-tags">
+							<span class="tag">Desarrollo Web</span>
+							<span class="tag">Prácticas</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Alegra - Accounting Editor -->
+				<div class="timeline-item">
+					<div class="timeline-marker">
+						<div class="marker-dot"></div>
+						<div class="marker-line"></div>
+					</div>
+					<div class="timeline-content">
+						<div class="timeline-header">
+							<h3 class="job-title">Accounting Editor</h3>
+							<span class="job-duration">1 año 11 meses</span>
+						</div>
+						<div class="job-company">Alegra</div>
+						<div class="job-date">Septiembre de 2023 - Julio de 2025</div>
+						<p class="job-description">
+							Capacitación a usuarios sobre temas contables, fiscales y sobre el manejo del software 
+							en países como Colombia, México, Perú, España, entre otros. Creación de contenido educativo 
+							y soporte técnico especializado.
+						</p>
+						<div class="job-tags">
+							<span class="tag">Contabilidad</span>
+							<span class="tag">Capacitación</span>
+							<span class="tag">Software</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Alegra - Customer Success Leader -->
+				<div class="timeline-item">
+					<div class="timeline-marker">
+						<div class="marker-dot"></div>
+						<div class="marker-line"></div>
+					</div>
+					<div class="timeline-content">
+						<div class="timeline-header">
+							<h3 class="job-title">Customer Success Leader</h3>
+							<span class="job-duration">1 año 4 meses</span>
+						</div>
+						<div class="job-company">Alegra</div>
+						<div class="job-date">Junio de 2022 - Septiembre de 2023</div>
+						<div class="job-location">Bogotá, Distrito Capital, Colombia</div>
+						<p class="job-description">
+							Propuesta e implementación de ideas para la mejora constante del proceso de soporte 
+							considerando las actualizaciones del producto/servicio. Liderazgo de proyecto de capacitación 
+							para agilizar la incorporación de nuevos agentes de soporte.
+						</p>
+						<div class="job-tags">
+							<span class="tag">Liderazgo</span>
+							<span class="tag">Customer Success</span>
+							<span class="tag">Capacitación</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Banco Davivienda -->
+				<div class="timeline-item">
+					<div class="timeline-marker">
+						<div class="marker-dot"></div>
+					</div>
+					<div class="timeline-content">
+						<div class="timeline-header">
+							<h3 class="job-title">Analista III Desembolsos Empresariales</h3>
+							<span class="job-duration">7 meses</span>
+						</div>
+						<div class="job-company">Banco Davivienda</div>
+						<div class="job-date">Agosto de 2021 - Febrero de 2022</div>
+						<div class="job-location">Bogotá, Distrito Capital, Colombia</div>
+						<p class="job-description">
+							Recepción, análisis y desembolso de créditos en el segmento pyme correspondiente 
+							a los productos ofrecidos por el banco. Gestión de procesos financieros y 
+							cumplimiento de normativas bancarias.
+						</p>
+						<div class="job-tags">
+							<span class="tag">Análisis Financiero</span>
+							<span class="tag">Banca</span>
+							<span class="tag">Créditos</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.experience-section {
+		padding: var(--space-20) 0;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.container {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 0 clamp(1rem, 5vw, 3rem);
+		width: 100%;
+	}
+
+	/* ===== HEADER ===== */
+	.section-header {
+		text-align: center;
+		margin-bottom: var(--space-16);
+	}
+
+	.section-title {
+		font-size: clamp(2rem, 5vw, 3.5rem);
+		font-weight: 800;
+		color: var(--text-primary);
+		margin-bottom: 1rem;
+	}
+
+	.text-gradient {
+		background: var(--gradient-1);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.section-subtitle {
+		font-size: clamp(1rem, 2.5vw, 1.25rem);
+		color: var(--text-secondary);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	/* ===== GRID ===== */
+	.experience-grid {
+		display: grid;
+		gap: var(--space-12);
+		align-items: start;
+	}
+
+	/* ===== IMAGEN ===== */
+	.experience-visual {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 2rem;
+	}
+
+	.image-wrapper {
+		position: relative;
+		width: 100%;
+		max-width: 400px;
+		z-index: 2;
+		border-radius: 1rem;
+		overflow: hidden;
+		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+		transition: transform 0.3s ease;
+	}
+
+	.image-wrapper:hover {
+		transform: translateY(-10px);
+	}
+
+	.experience-image {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	.decoration-circle {
+		position: absolute;
+		width: 350px;
+		height: 350px;
+		border-radius: 50%;
+		background: var(--gradient-2);
+		filter: blur(80px);
+		opacity: 0.2;
+		z-index: 1;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	/* ===== TIMELINE ===== */
+	.experience-timeline {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.timeline-item {
+		display: grid;
+		grid-template-columns: 40px 1fr;
+		gap: 1.5rem;
+		position: relative;
+	}
+
+	.timeline-marker {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+	}
+
+	.marker-dot {
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background: var(--primary-500);
+		border: 3px solid var(--background);
+		box-shadow: 0 0 0 3px var(--primary-300);
+		z-index: 2;
+		flex-shrink: 0;
+	}
+
+	.marker-line {
+		width: 2px;
+		flex: 1;
+		background: var(--secondary-300);
+		margin-top: 0.5rem;
+		min-height: 100%;
+	}
+
+	.timeline-item:last-child .marker-line {
+		display: none;
+	}
+
+	/* ===== CONTENIDO ===== */
+	.timeline-content {
+		background: var(--white);
+		padding: 1.5rem;
+		border-radius: 1rem;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+		transition: all 0.3s ease;
+		border: 1px solid transparent;
+	}
+
+	.timeline-content:hover {
+		transform: translateX(8px);
+		box-shadow: 0 8px 30px rgba(59, 130, 246, 0.15);
+		border-color: var(--primary-300);
+	}
+
+	.timeline-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+		margin-bottom: 0.5rem;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.job-title {
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: var(--text-primary);
+		margin: 0;
+	}
+
+	.job-duration {
+		font-size: 0.875rem;
+		font-weight: 600;
+		color: var(--primary-500);
+		background: var(--secondary-100);
+		padding: 0.25rem 0.75rem;
+		border-radius: 0.5rem;
+		white-space: nowrap;
+	}
+
+	.job-company {
+		font-size: 1.125rem;
+		font-weight: 600;
+		color: var(--primary-500);
+		margin-bottom: 0.25rem;
+	}
+
+	.job-date {
+		font-size: 0.875rem;
+		color: var(--text-secondary);
+		margin-bottom: 0.25rem;
+	}
+
+	.job-location {
+		font-size: 0.875rem;
+		color: var(--text-secondary);
+		margin-bottom: 0.75rem;
+		display: flex;
+		align-items: center;
+		gap: 0.25rem;
+	}
+
+	.job-location::before {
+		content: '📍';
+	}
+
+	.job-description {
+		color: var(--text-secondary);
+		line-height: 1.7;
+		margin: 1rem 0;
+	}
+
+	.job-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-top: 1rem;
+	}
+
+	.tag {
+		font-size: 0.75rem;
+		font-weight: 500;
+		color: var(--primary-500);
+		background: var(--primary-300);
+		background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+		padding: 0.375rem 0.75rem;
+		border-radius: 0.5rem;
+		border: 1px solid var(--primary-300);
+	}
+
+	/* ===== RESPONSIVE ===== */
+	@media (min-width: 1024px) {
+		.experience-grid {
+			grid-template-columns: 400px 1fr;
+			gap: var(--space-16);
+			align-items: start;
+		}
+
+		.experience-visual {
+			position: sticky;
+			top: 100px;
+			margin-bottom: 0;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.timeline-item {
+			grid-template-columns: 30px 1fr;
+			gap: 1rem;
+		}
+
+		.marker-dot {
+			width: 12px;
+			height: 12px;
+		}
+
+		.timeline-content {
+			padding: 1.25rem;
+		}
+
+		.job-title {
+			font-size: 1.125rem;
+		}
+
+		.timeline-header {
+			flex-direction: column;
+			align-items: start;
+		}
+	}
+
+	/* ===== ANIMACIONES ===== */
+	@media (prefers-reduced-motion: no-preference) {
+		.timeline-item {
+			opacity: 0;
+			animation: fadeInUp 0.6s ease-out forwards;
+		}
+
+		.timeline-item:nth-child(1) { animation-delay: 0.1s; }
+		.timeline-item:nth-child(2) { animation-delay: 0.2s; }
+		.timeline-item:nth-child(3) { animation-delay: 0.3s; }
+		.timeline-item:nth-child(4) { animation-delay: 0.4s; }
+
+		@keyframes fadeInUp {
+			from {
+				opacity: 0;
+				transform: translateY(30px);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+</style>
