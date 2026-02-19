@@ -10,7 +10,7 @@ import { Image } from 'astro:assets';
 				Formación <span class="text-gradient">Académica</span>
 			</h2>
 			<p class="section-subtitle">
-				Mi camino de aprendizaje y desarrollo profesional
+				Un camino de aprendizaje y desarrollo profesional
 			</p>
 		</div>
 
@@ -24,7 +24,6 @@ import { Image } from 'astro:assets';
 						<div class="marker-line"></div>
 					</div>
 					<div class="timeline-content">
-						<div class="education-icon">🎓</div>
 						<h3 class="degree-title">Tecnólogo en Análisis y Desarrollo de Software</h3>
 						<div class="institution">Servicio Nacional de Aprendizaje (SENA)</div>
 						<div class="field">Tecnología de la Información</div>
@@ -50,7 +49,6 @@ import { Image } from 'astro:assets';
 						<div class="marker-line"></div>
 					</div>
 					<div class="timeline-content">
-						<div class="education-icon">🏛️</div>
 						<h3 class="degree-title">Pregrado en Contaduría Pública</h3>
 						<div class="institution">Universidad Santo Tomás Colombia</div>
 						<div class="education-date">Febrero de 2017 - Abril de 2022</div>
@@ -75,7 +73,6 @@ import { Image } from 'astro:assets';
 						<div class="marker-line"></div>
 					</div>
 					<div class="timeline-content">
-						<div class="education-icon">📚</div>
 						<h3 class="degree-title">Curso Internacional de Revisoría Fiscal</h3>
 						<div class="institution">Asociación Latinoamericana de Facultades y Escuelas de Contaduría y Administración – Alafec</div>
 						<div class="education-date">Noviembre de 2020 - Diciembre de 2020</div>
@@ -98,13 +95,12 @@ import { Image } from 'astro:assets';
 						<div class="marker-dot"></div>
 					</div>
 					<div class="timeline-content">
-						<div class="education-icon">🌎</div>
 						<h3 class="degree-title">Movilidad Estudiantil</h3>
 						<div class="institution">Universidad Andina del Cusco</div>
 						<div class="field">Contabilidad y Actividades Afines</div>
 						<div class="education-date">Julio de 2019 - Diciembre de 2019</div>
 						<p class="education-description">
-							Experiencia internacional de intercambio académico en Perú. 
+							Experiencia internacional de intercambio académico en Cusco - Perú. 
 							Inmersión en sistemas contables internacionales y 
 							enriquecimiento cultural y profesional.
 						</p>
@@ -243,12 +239,6 @@ import { Image } from 'astro:assets';
 		border-color: rgba(20, 184, 166, 0.3);
 	}
 
-	.education-icon {
-		font-size: 2rem;
-		margin-bottom: 0.75rem;
-		display: inline-block;
-	}
-
 	.degree-title {
 		font-size: 1.25rem;
 		font-weight: 700;
@@ -317,7 +307,7 @@ import { Image } from 'astro:assets';
 		z-index: 2;
 		border-radius: 1rem;
 		overflow: hidden;
-		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+		/* box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15); */
 		transition: transform 0.3s ease;
 	}
 
@@ -381,10 +371,6 @@ import { Image } from 'astro:assets';
 
 		.degree-title {
 			font-size: 1.125rem;
-		}
-
-		.education-icon {
-			font-size: 1.5rem;
 		}
 	}
 
