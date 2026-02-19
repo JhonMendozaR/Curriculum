@@ -15,6 +15,13 @@
 
 ## 🎨 Referencias Visuales
 
+https://dribbble.com/shots/15187218-Adam-Zonski-Personal-Portfolio-Website
+https://dribbble.com/shots/26701154-Calliam-Creative-CV-for-Professionals
+https://dribbble.com/shots/26539647-Selfolio-Creative-CV-Landing-Page
+https://dribbble.com/shots/26851273-Graphics-Designer-Portfolio-Design
+https://dribbble.com/shots/7524299-Personal-Portfolio-CV-Resume-Template
+https://dribbble.com/shots/9177342-Aabot-Creative-Portfolio-CV-Bio-Website
+
 ### Hero Section - Referencias de Diseño
 
 - Estilo minimalista y limpio

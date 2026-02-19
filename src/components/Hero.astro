@@ -1,6 +1,6 @@
 ---
 import perfil from '../assets/Perfil.png';
-import perfilProfesional from '../assets/Perfil-profesional1.png';
+import perfilProfesional from '../assets/Perfil-profesional.png';
 import { Image } from 'astro:assets';
 ---
 
@@ -10,26 +10,9 @@ import { Image } from 'astro:assets';
 			<!-- Contenido Principal -->
 			<div class="hero-content">				
 				<h1 class="hero-title">
-					Hola, soy <span class="text-gradient">Jhon Mendoza</span>
+					<span class="hero-subtitle">Hola, soy </span>
+					<span class="hero-name text-gradient">Jhon Mendoza</span>
 				</h1>
-				
-				<p class="hero-subtitle">
-					Desarrollador apasionado por crear experiencias web modernas, 
-					eficientes y accesibles. Transformo ideas en soluciones digitales que conectan 
-					negocio, tecnología y usuarios.
-				</p>
-				
-				<div class="cta-group">
-					<a href="#experiencia" class="btn btn-primary">
-						Ver Experiencia
-						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							<path d="M5 12h14M12 5l7 7-7 7"/>
-						</svg>
-					</a>
-					<a href="#contacto" class="btn btn-secondary">
-						Contactar
-					</a>
-				</div>
 			</div>
 
 			<!-- Imagen Flotante -->
@@ -40,7 +23,7 @@ import { Image } from 'astro:assets';
 							<div class="image-flip-front">
 								<Image 
 									src={perfil} 
-									alt="Jhon Mendoza - Desarrollador"
+									alt="Jhon Mendoza - Profesional"
 									class="hero-image"
 									loading="eager"
 								/>
@@ -58,15 +41,15 @@ import { Image } from 'astro:assets';
 				</div>
 				
 				<!-- Elementos decorativos -->
-				<div class="decoration-blob decoration-blob-1"></div>
-				<div class="decoration-blob decoration-blob-2"></div>
+				<div class="decoration-blob decoration-blob-1">Desarrollador</div>
+				<div class="decoration-blob decoration-blob-2">Contador público</div>
 			</div>
 		</div>
 	</div>
 
 	<!-- Scroll Indicator -->
 	<div class="scroll-indicator">
-		<span>Scroll</span>
+		<span>Conoce más</span>
 		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 			<path d="M12 5v14M19 12l-7 7-7-7"/>
 		</svg>
@@ -75,7 +58,7 @@ import { Image } from 'astro:assets';
 
 <style>
 	.hero-section {
-		min-height: 100vh;
+		height: 100vh;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -89,9 +72,11 @@ import { Image } from 'astro:assets';
 		margin: 0 auto;
 		padding: 0 clamp(1rem, 5vw, 3rem);
 		width: 100%;
+		padding-top: 40px;
 	}
 
 	.hero-grid {
+		position: relative;
 		display: grid;
 		gap: var(--space-12);
 		align-items: center;
@@ -99,17 +84,31 @@ import { Image } from 'astro:assets';
 
 	/* ===== CONTENIDO ===== */
 	.hero-content {
+		position: relative;
+		z-index: 2;
 		text-align: center;
 		animation: fadeInUp 0.8s ease-out;
+		padding-left: 10%;
+		padding-top: 15%;
 	}
 
 	.hero-title {
-		font-size: clamp(2.5rem, 8vw, 5rem);
-		font-weight: 900;
 		line-height: 1.1;
 		letter-spacing: -0.02em;
 		color: var(--text-primary);
-		margin-bottom: 1.5rem;
+		font-weight: 900;
+	}
+
+	.hero-title span {
+		display: block;
+	}
+
+	.hero-subtitle {
+		font-size: clamp(1.5rem, 4vw, 2rem);
+	}
+
+	.hero-name {
+		font-size: clamp(2.5rem, 8vw, 4rem);
 	}
 
 	.text-gradient {
@@ -119,99 +118,24 @@ import { Image } from 'astro:assets';
 		background-clip: text;
 	}
 
-	.hero-subtitle {
-		font-size: clamp(1rem, 3vw, 1.25rem);
-		font-weight: 400;
-		line-height: 1.7;
-		color: var(--text-secondary);
-		max-width: 600px;
-		margin: 0 auto 2rem;
-		animation: fadeInUp 0.8s ease-out 0.2s backwards;
-	}
-
-	/* ===== CTAs ===== */
-	.cta-group {
-		display: flex;
-		gap: 1rem;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: center;
-		margin-bottom: 3rem;
-		animation: fadeInUp 0.8s ease-out 0.4s backwards;
-	}
-
-	.btn {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0.5rem;
-		padding: 1rem 2rem;
-		font-size: 1rem;
-		font-weight: 600;
-		border-radius: 0.75rem;
-		cursor: pointer;
-		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-		border: none;
-		text-decoration: none;
-		position: relative;
-		overflow: hidden;
-	}
-
-	.btn-primary {
-		background: var(--primary-500);
-		color: var(--white);
-		box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
-	}
-
-	.btn-primary:hover {
-		background: var(--primary-700);
-		transform: translateY(-2px);
-		box-shadow: 4px 4px 25px #6B7280;
-	}
-
-	.btn-primary::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: -100%;
-		width: 100%;
-		height: 100%;
-		background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-		transition: left 0.5s ease;
-	}
-
-	.btn-primary:hover::before {
-		left: 100%;
-	}
-
-	.btn-secondary {
-		background: transparent;
-		color: var(--text-primary);
-		border: 2px solid var(--secondary-300);
-	}
-
-	.btn-secondary:hover {
-		background: var(--secondary-100);
-		border-color: var(--primary-500);
-		color: var(--primary-500);
-		transform: translateY(-2px);
-	}
-
 	/* ===== IMAGEN FLOTANTE ===== */
 	.hero-visual {
-		position: relative;
+		position: absolute;
+		inset: 0;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		animation: fadeInUp 0.8s ease-out 0.8s backwards;
+		z-index: 1;
+		height: 46vh;
 	}
 
 	.hero-image-wrapper {
 		position: relative;
 		width: 100%;
-		max-width: 350px;
+		max-width: clamp(200px, 30vw, 600px);
 		z-index: 2;
-		animation: float 6s ease-in-out infinite;
+		/* animation: float 6s ease-in-out infinite; */
 	}
 
 	/* ===== EFECTO FLIP 3D ===== */
@@ -259,34 +183,42 @@ import { Image } from 'astro:assets';
 	.decoration-blob {
 		position: absolute;
 		border-radius: 50%;
-		filter: blur(60px);
-		opacity: 0.3;
-		z-index: 1;
+		z-index: 3;
 		animation: pulse 8s ease-in-out infinite;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		font-weight: 900;
+		text-align: center;
+		padding: 1rem;
+		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 	}
 
 	.decoration-blob-1 {
-		width: 300px;
-		height: 300px;
+		width: 220px;
+		height: 220px;
 		background: var(--primary-500);
-		top: 200px;
-		right: -50px;
+		right: 20%;
+		top: 70%;
+		font-size: clamp(1.5rem, 1vw, 2rem);
 	}
 
 	.decoration-blob-2 {
-		width: 250px;
-		height: 250px;
+		width: 160px;
+		height: 160px;
 		background: var(--accent-purple);
-		bottom: -50px;
-		left: -50px;
+		left: 85%;
+		bottom: 80%;
 		animation-delay: 2s;
+		font-size: clamp(0.875rem, 1.5vw, 1.125rem);
 	}
 
 	/* Scroll Indicator */
 	.scroll-indicator {
 		position: absolute;
 		bottom: 2rem;
-		left: 50%;
+		left: 90%;
 		transform: translateX(-50%);
 		display: flex;
 		flex-direction: column;
@@ -324,11 +256,11 @@ import { Image } from 'astro:assets';
 	@keyframes pulse {
 		0%, 100% {
 			transform: scale(1);
-			opacity: 0.3;
+			opacity: 1;
 		}
 		50% {
 			transform: scale(1.1);
-			opacity: 0.5;
+			opacity: 1;
 		}
 	}
 
@@ -342,6 +274,30 @@ import { Image } from 'astro:assets';
 	}
 
 	/* ===== RESPONSIVE ===== */
+	/* Móvil: Sin superposiciones, blobs ocultos */
+	@media (max-width: 1023px) {
+		.hero-content {
+			padding-left: 0;
+			padding-top: 150px;
+		}
+
+		.hero-visual {
+			position: relative;
+			inset: auto;
+			height: auto;
+			margin-top: 8rem;
+		}
+
+		.decoration-blob {
+			display: none;
+		}
+
+		.scroll-indicator {
+			display: none;
+		}
+	}
+
+	/* Desktop: Layout original */
 	@media (min-width: 1024px) {
 		.hero-grid {
 			grid-template-columns: 1fr 1fr;
@@ -352,22 +308,8 @@ import { Image } from 'astro:assets';
 			text-align: left;
 		}
 
-		.hero-subtitle {
-			margin: 0 0 2rem 0;
-		}
-
-		.cta-group {
-			justify-content: flex-start;
-		}
-
 		.hero-visual {
 			order: 2;
-		}
-	}
-
-	@media (max-width: 640px) {
-		.btn {
-			width: 100%;
 		}
 	}
 </style>
