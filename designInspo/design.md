@@ -75,7 +75,8 @@ https://dribbble.com/shots/9177342-Aabot-Creative-Portfolio-CV-Bio-Website
 /* Gradientes Modernos */
 --gradient-1: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
 --gradient-2: linear-gradient(135deg, #14B8A6 0%, #3B82F6 100%);
---gradient-3: linear-gradient(135deg, #F97316 0%, #EC4899 100%);
+--gradient-3: linear-gradient(135deg, #6366F1 0%, #06B6D4 100%);
+--gradient-4: linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%);
 --gradient-hero: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 100%);
 ```
 
