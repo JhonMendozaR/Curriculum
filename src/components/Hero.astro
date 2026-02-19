@@ -125,7 +125,6 @@ import { Image } from 'astro:assets';
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		animation: fadeInUp 0.8s ease-out 0.8s backwards;
 		z-index: 1;
 		height: 46vh;
 	}
@@ -135,6 +134,7 @@ import { Image } from 'astro:assets';
 		width: 100%;
 		max-width: clamp(200px, 30vw, 600px);
 		z-index: 2;
+		animation: fadeInUp 0.8s ease-out 0.9s backwards;
 		/* animation: float 6s ease-in-out infinite; */
 	}
 
@@ -184,7 +184,6 @@ import { Image } from 'astro:assets';
 		position: absolute;
 		border-radius: 50%;
 		z-index: 3;
-		animation: pulse 8s ease-in-out infinite;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -202,6 +201,7 @@ import { Image } from 'astro:assets';
 		right: 20%;
 		top: 70%;
 		font-size: clamp(1.5rem, 1vw, 2rem);
+		animation: fadeInUp 0.8s ease-out 0.6s backwards, pulse 8s ease-in-out 1.4s infinite;
 	}
 
 	.decoration-blob-2 {
@@ -210,8 +210,8 @@ import { Image } from 'astro:assets';
 		background: var(--accent-purple);
 		left: 85%;
 		bottom: 80%;
-		animation-delay: 2s;
 		font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+		animation: fadeInUp 0.8s ease-out 0.3s backwards, pulse 8s ease-in-out 1.1s infinite;
 	}
 
 	/* Scroll Indicator */
